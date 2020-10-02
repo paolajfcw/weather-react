@@ -8,7 +8,7 @@ export default function Weather() {
   const [city, setCity] = useState(null);
   const [weatherInfo, setWeatherInfo] = useState({
     name: "Berlin",
-    temperature: "17",
+    temperature: "16",
   });
 
   function showWeatherCondition(response) {
