@@ -7,11 +7,11 @@ import Forecast from "./Forecast";
 
 export default function App() {
   return (
-    <div className="container">
-      <section className="weather-content">
+    <div className="App">
+      <div className="container">
         <Weather />
         <Forecast />
-      </section>
+      </div>
     </div>
   );
 }
