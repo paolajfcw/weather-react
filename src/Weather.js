@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import axios from "axios";
 import "./Weather.css";
-import TimeDate from "./TimeDate.js";
+import WeatherData from "./WeatherData";
 import Forecast from "./Forecast";
 
 export default function Weather(props) {
@@ -39,40 +39,7 @@ export default function Weather(props) {
   if (weatherInfo.loaded) {
     return (
       <div className="Weather">
-        <div className="row">
-          <div className="col-5">
-            <h1>
-              <span className="temp">
-                {Math.round(weatherInfo.temperature)}
-              </span>
-              <span className="degrees">
-                <a href="/" className="font-day" id="celsius-temp">
-                  °C
-                </a>{" "}
-                |{" "}
-                <a href="/" className="font-day" id="fahrenheit-temp">
-                  °F
-                </a>
-              </span>
-            </h1>
-            <TimeDate />
-          </div>
-
-          <div className="col-7 p-0 city-condition">
-            <h2>
-              <span>{weatherInfo.name.toUpperCase()}</span>
-            </h2>
-            <center>
-              <img src={weatherInfo.image} alt={weatherInfo.description} />
-            </center>
-            <h3>
-              <span>{weatherInfo.description}</span>
-              <br />
-              Wind: <span>{Math.round(weatherInfo.wind)}</span>km/h <br />
-              Humidity: <span>{weatherInfo.humidity}</span>%
-            </h3>
-          </div>
-        </div>
+        <WeatherData data={weatherInfo} />
 
         <form className="Search" onSubmit={handleSubmit}>
           <div className="row">
