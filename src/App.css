@@ -1,11 +1,9 @@
 .App {
-  background-image: url(https://cdn.pixabay.com/photo/2014/10/07/20/54/sunset-478396_960_720.jpg),
-    linear-gradient(-100deg, #f52a45 0%, #faa75e 100%);
-  display: block;
   margin: 0 auto;
   max-width: 700px;
-  padding: 43px;
-  color: #fff;
-  font-family: "Balsamiq Sans", cursive;
-  border-radius: 4px;
+}
+
+.App center {
+  font-size: 13px;
+  padding-top: 5px;
 }

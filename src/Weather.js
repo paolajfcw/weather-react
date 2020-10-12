@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
 import TimeDate from "./TimeDate.js";
+import Forecast from "./Forecast";
 
 export default function Weather() {
   const [city, setCity] = useState(null);
@@ -33,7 +34,7 @@ export default function Weather() {
   }
 
   return (
-    <div>
+    <div className="Weather">
       <div className="row">
         <div className="col-5">
           <h1>
@@ -78,6 +79,7 @@ export default function Weather() {
                 className="form-control"
                 placeholder="Enter your city"
                 autoComplete="off"
+                autoFocus="on"
                 onChange={getCity}
               />
             </div>
@@ -101,6 +103,7 @@ export default function Weather() {
           </div>
         </div>
       </form>
+      <Forecast />
     </div>
   );
 }
