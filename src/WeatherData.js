@@ -2,26 +2,14 @@ import React from "react";
 
 import TimeDate from "./TimeDate.js";
 import WeatherIcon from "./WeatherIcon.js";
+import TempConversion from "./TempConversion.js";
 
 export default function WeatherData(props) {
   return (
     <div className="WeatherData">
       <div className="row">
         <div className="col-5">
-          <h1>
-            <span className="temperature">
-              {Math.round(props.data.temperature)}
-            </span>
-            <span className="scales">
-              <a href="/" className="font-scale">
-                °C
-              </a>{" "}
-              |{" "}
-              <a href="/" className="font-scale">
-                °F
-              </a>
-            </span>
-          </h1>
+          <TempConversion celsiusTemp={props.data.temperature} />
           <TimeDate dayTime={props.data.date} />
         </div>
 
