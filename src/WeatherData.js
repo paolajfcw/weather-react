@@ -9,16 +9,16 @@ export default function WeatherData(props) {
         <h1>
           <span className="temp">{Math.round(props.data.temperature)}</span>
           <span className="degrees">
-            <a href="/" className="font-day" id="celsius-temp">
+            <a href="/" className="font-day">
               °C
             </a>{" "}
             |{" "}
-            <a href="/" className="font-day" id="fahrenheit-temp">
+            <a href="/" className="font-day">
               °F
             </a>
           </span>
         </h1>
-        <TimeDate />
+        <TimeDate dayTime={props.data.date} />
       </div>
 
       <div className="col-7 p-0 city-condition">
