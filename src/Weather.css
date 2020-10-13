@@ -7,42 +7,28 @@
   border-radius: 5px;
 }
 
-h1 {
+.WeatherData h1 {
   height: 150px;
   margin-bottom: 0;
 }
-h1 .temp {
+
+.WeatherData .temperature {
   font-size: 90px;
 }
 
-.degrees {
+.WeatherData .scales {
   font-size: 30px;
   line-height: 2.7;
   position: relative;
   bottom: 43px;
 }
 
-.font-day:hover {
+.WeatherData .font-scale:hover {
   cursor: pointer;
   color: #48484a;
 }
 
-.font-day {
-  font-size: 30px;
-  color: #fff;
-}
-
-h4 {
-  height: 100;
-  margin: 0;
-}
-
-ul {
-  padding: 0;
-}
-
-.TimeDate {
-  list-style: none;
+.WeatherData .font-scale {
   font-size: 30px;
   color: #fff;
 }
@@ -52,7 +38,7 @@ ul {
   padding: 5px 0;
 }
 
-.city-condition {
+.WeatherData .w-condition {
   position: relative;
   left: 20px;
 }

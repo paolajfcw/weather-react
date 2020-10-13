@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./TimeDate.css";
+
 export default function TimeDate(props) {
   let days = [
     "Sunday",
