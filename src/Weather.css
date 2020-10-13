@@ -62,3 +62,7 @@ h3:first-letter {
 .Search {
   margin: 20px auto;
 }
+i {
+  color: #f52a45;
+  font-size: 20px;
+}

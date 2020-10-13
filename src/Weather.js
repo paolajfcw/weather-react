@@ -67,7 +67,7 @@ export default function Weather(props) {
                 id="current-location"
               >
                 <span role="img" aria-label="Location">
-                  📍
+                  <i className="fas fa-map-marker-alt"></i>
                 </span>{" "}
                 Location
               </button>
