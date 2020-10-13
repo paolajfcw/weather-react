@@ -1,6 +1,7 @@
 import React from "react";
 
 import TimeDate from "./TimeDate.js";
+import WeatherIcon from "./WeatherIcon.js";
 
 export default function WeatherData(props) {
   return (
@@ -29,7 +30,7 @@ export default function WeatherData(props) {
             <span>{props.data.name.toUpperCase()}</span>
           </h2>
           <center>
-            <img src={props.data.image} alt={props.data.description} />
+            <WeatherIcon iconCode={props.data.image} />
           </center>
           <h3>
             <span>{props.data.description}</span>
