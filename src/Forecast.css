@@ -1,4 +1,4 @@
-.forecast-hours {
+.ForecastDisplay {
   font-size: 19px;
   text-align: center;
   line-height: 20px;
@@ -8,21 +8,12 @@
   box-shadow: 8px 8px 12px rgba(150, 122, 122, 0.3);
 }
 
-.forecast-hours:hover {
+.ForecastDisplay:hover {
   background-color: rgba(150, 122, 122, 0.3);
 }
 
-h4 {
+.ForecastDisplay h4 {
   font-size: 20px;
   font-weight: lighter;
-  line-height: 10px;
-  height: 100;
   margin: 0;
-}
-
-.weather-image {
-  display: block;
-  margin: 0 auto;
-  width: 70px;
-  padding-bottom: 15px;
 }

@@ -15,7 +15,7 @@ export default function WeatherData(props) {
 
         <div className="col-7 p-0 w-condition">
           <h2>
-            <span>{props.data.name.toUpperCase()}</span>
+            <span>{props.data.cityName.toUpperCase()}</span>
           </h2>
           <center>
             <WeatherIcon iconCode={props.data.image} />
