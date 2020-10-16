@@ -14,7 +14,6 @@ export default function Forecast(props) {
   }
 
   if (loaded && props.city === forecast.city.name) {
-    console.log(forecast);
     return (
       <div className="row">
         <ForecastDisplay info={forecast.list[0]} scale={props.scale} />
