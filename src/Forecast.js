@@ -17,12 +17,12 @@ export default function Forecast(props) {
     console.log(forecast);
     return (
       <div className="row">
-        <ForecastDisplay info={forecast.list[0]} />
-        <ForecastDisplay info={forecast.list[1]} />
-        <ForecastDisplay info={forecast.list[2]} />
-        <ForecastDisplay info={forecast.list[3]} />
-        <ForecastDisplay info={forecast.list[4]} />
-        <ForecastDisplay info={forecast.list[5]} />
+        <ForecastDisplay info={forecast.list[0]} scale={props.scale} />
+        <ForecastDisplay info={forecast.list[1]} scale={props.scale} />
+        <ForecastDisplay info={forecast.list[2]} scale={props.scale} />
+        <ForecastDisplay info={forecast.list[3]} scale={props.scale} />
+        <ForecastDisplay info={forecast.list[4]} scale={props.scale} />
+        <ForecastDisplay info={forecast.list[5]} scale={props.scale} />
       </div>
     );
   } else {

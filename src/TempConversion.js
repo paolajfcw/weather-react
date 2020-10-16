@@ -1,19 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
 
 export default function TempConversion(props) {
-  const [scale, setScale] = useState("celsius");
-
   function displayCelsius(event) {
     event.preventDefault();
-    setScale("celsius");
+    props.setScale("celsius");
   }
 
   function displayFahrenheit(event) {
     event.preventDefault();
-    setScale("fahrenheit");
+    props.setScale("fahrenheit");
   }
 
-  if (scale === "celsius") {
+  if (props.scale === "celsius") {
     return (
       <h1>
         <span className="temperature">{Math.round(props.celsiusTemp)}</span>

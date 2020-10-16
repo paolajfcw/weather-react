@@ -12,14 +12,30 @@ export default function ForecastDisplay(props) {
     return `${hour}:00`;
   }
 
-  return (
-    <div className="col-2 ForecastDisplay">
-      <h4>{displayHours()}</h4>
-      <WeatherIcon iconCode={props.info.weather[0].icon} />
-      <div>
-        <strong>{Math.round(props.info.main.temp_max)}° </strong>
-        <span>{Math.round(props.info.main.temp_min)}°</span>
+  if (props.scale === "celsius") {
+    return (
+      <div className="col-2 ForecastDisplay">
+        <h4>{displayHours()}</h4>
+        <WeatherIcon iconCode={props.info.weather[0].icon} />
+        <div>
+          <strong>{Math.round(props.info.main.temp_max)}° </strong>
+          <span>{Math.round(props.info.main.temp_min)}°</span>
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    let fahrenheitMaxTemp = Math.round((props.info.main.temp_max * 9) / 5 + 32);
+    let fahrenheitMinTemp = Math.round((props.info.main.temp_min * 9) / 5 + 32);
+
+    return (
+      <div className="col-2 ForecastDisplay">
+        <h4>{displayHours()}</h4>
+        <WeatherIcon iconCode={props.info.weather[0].icon} />
+        <div>
+          <strong>{fahrenheitMaxTemp}° </strong>
+          <span>{fahrenheitMinTemp}°</span>
+        </div>
+      </div>
+    );
+  }
 }

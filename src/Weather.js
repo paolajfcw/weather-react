@@ -8,6 +8,7 @@ import Forecast from "./Forecast";
 export default function Weather(props) {
   const [weatherInfo, setWeatherInfo] = useState({ loaded: false });
   const [city, setCity] = useState(props.defaultCity);
+  const [scale, setScale] = useState("celsius");
 
   function handleResponse(response) {
     setWeatherInfo({
@@ -39,7 +40,7 @@ export default function Weather(props) {
   if (weatherInfo.loaded) {
     return (
       <div className="Weather">
-        <WeatherData data={weatherInfo} />
+        <WeatherData data={weatherInfo} scale={scale} setScale={setScale} />
 
         <form className="Search" onSubmit={handleSubmit}>
           <div className="row">
@@ -74,7 +75,7 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-        <Forecast city={weatherInfo.cityName} />
+        <Forecast city={weatherInfo.cityName} scale={scale} />
       </div>
     );
   } else {

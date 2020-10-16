@@ -9,7 +9,11 @@ export default function WeatherData(props) {
     <div className="WeatherData">
       <div className="row">
         <div className="col-5">
-          <TempConversion celsiusTemp={props.data.temperature} />
+          <TempConversion
+            celsiusTemp={props.data.temperature}
+            scale={props.scale}
+            setScale={props.setScale}
+          />
           <TimeDate dayTime={props.data.date} />
         </div>
 
