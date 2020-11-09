@@ -14,7 +14,7 @@ export default function TempConversion(props) {
   if (props.scale === "celsius") {
     return (
       <h1>
-        <span className="temperature">{Math.round(props.celsiusTemp)}</span>
+        <span className="temperature">{Math.round(props.celsiusTemp)}</span>{" "}
         <span className="scales">
           <a href="/" className="font-scale">
             °C

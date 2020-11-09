@@ -56,7 +56,7 @@ export default function Weather(props) {
 
         <form className="Search" onSubmit={handleSubmit}>
           <div className="row">
-            <div className="col-5 pr-1">
+            <div className="col-md-6">
               <div className="form-group">
                 <input
                   type="search"
@@ -68,12 +68,12 @@ export default function Weather(props) {
                 />
               </div>
             </div>
-            <div className="col-3 pr-0 pl-1">
+            <div className="col-6 col-md-auto">
               <button type="submit" className="btn btn-light">
-                Search
+                <i className="fas fa-search"></i> Search
               </button>
             </div>
-            <div className="col-4 pl-1">
+            <div className="col-6 col-md-auto">
               <button
                 type="button"
                 className="btn btn-light"
@@ -82,7 +82,7 @@ export default function Weather(props) {
                 <span role="img" aria-label="Location">
                   <i className="fas fa-map-marker-alt"></i>
                 </span>{" "}
-                Location
+                My Location
               </button>
             </div>
           </div>

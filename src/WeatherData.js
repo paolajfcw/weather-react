@@ -8,7 +8,7 @@ export default function WeatherData(props) {
   return (
     <div className="WeatherData">
       <div className="row">
-        <div className="col-5">
+        <div className="col-5 col-md-6">
           <TempConversion
             celsiusTemp={props.data.temperature}
             scale={props.scale}
@@ -17,7 +17,7 @@ export default function WeatherData(props) {
           <TimeDate dayTime={props.data.date} />
         </div>
 
-        <div className="col-7 p-0 w-condition">
+        <div className="col-7 col-md-6 p-0">
           <h2>
             <span>{props.data.cityName.toUpperCase()}</span>
           </h2>

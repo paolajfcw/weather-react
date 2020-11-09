@@ -14,7 +14,7 @@ export default function ForecastDisplay(props) {
 
   if (props.scale === "celsius") {
     return (
-      <div className="col-2 ForecastDisplay">
+      <div className="col-4 col-md-2 p-0 ForecastDisplay">
         <h4>{displayHours()}</h4>
         <WeatherIcon iconCode={props.info.weather[0].icon} />
         <div>
@@ -28,7 +28,7 @@ export default function ForecastDisplay(props) {
     let fahrenheitMinTemp = Math.round((props.info.main.temp_min * 9) / 5 + 32);
 
     return (
-      <div className="col-2 ForecastDisplay">
+      <div className="col-4 col-md-2 p-0 ForecastDisplay">
         <h4>{displayHours()}</h4>
         <WeatherIcon iconCode={props.info.weather[0].icon} />
         <div>
